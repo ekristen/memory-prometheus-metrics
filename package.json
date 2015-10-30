@@ -8,6 +8,6 @@
   "repository": "ekristen/memory-prometheus-metrics",
   "dependencies": {
     "memwatch-next": "^0.2.9",
-    "prometheus-client-js": "^2.2.0"
+    "prometheus-client-js": "^2.3.0"
   }
 }

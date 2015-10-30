@@ -1,0 +1,12 @@
+{
+  "name": "memory-prometheus-metrics",
+  "version": "1.0.0",
+  "description": "Uses memwatch-next to provide memory metrics to a Prometheus server",
+  "main": "memory-metrics.js",
+  "author": "Erik Kristensen <erik@erikkristensen.com>",
+  "license": "MIT",
+  "dependencies": {
+    "memwatch-next": "^0.2.9",
+    "prometheus-client-js": "^2.2.0"
+  }
+}

@@ -15,6 +15,7 @@ function MemoryMetrics(client, opts) {
 
   this.opts = opts
   this.client = client || new Prometheus(this.opts)
+  this.memwatch = memwatch
 
   var metrics = {
     num_full_gc: this.client.newGauge({
@@ -74,4 +75,6 @@ function MemoryMetrics(client, opts) {
       }
     })
   })
+  
+  return this
 }

@@ -58,7 +58,7 @@ function MemoryMetrics(client, opts) {
       subsystem: 'nodejs_memory',
       help: 'Usage trend'
     }),
-    leaks: this.client.createGauge({
+    leaks: this.client.createCounter({
       name: 'memory_leaks_total',
       help: 'Total number of memory leaks'
     })
@@ -66,6 +66,7 @@ function MemoryMetrics(client, opts) {
 
   memwatch.on('leak', function(info) {
     metrics.leaks.increment()
+    console.warn('memory leak', info)
   })
   
   memwatch.on('stats', function(stats) {
